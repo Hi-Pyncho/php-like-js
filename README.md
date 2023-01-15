@@ -1,6 +1,6 @@
 # PHP like JS
 
-In this mini library i wrote help classes to make php more pleasant and understandable for me.
+In this mini library i wrote help classes with naive but helpful implementations to make php more pleasant and understandable for me.
 I love JS, but don't like PHP for many reasons. And one of them is a confusing and inconsistent syntax. 
 So, i decided to make my life easier and wrote these classes to use them in my job.
 
@@ -66,3 +66,6 @@ stdClass Object
 $colors = $result->params['colors'];
 ```
 [This class](./src/JSObject.php) has a method that recursively converts this into an associative array.
+
+## Easier to work with UTF-8 encoded strings
+PHP doesn't use utf-8 charset by default. And working with multibyte string in PHP is pain. You need use functions with `mb_` prefix, set charset manually etc.
