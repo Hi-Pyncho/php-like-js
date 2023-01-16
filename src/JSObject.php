@@ -32,17 +32,7 @@ class JSObject {
    * @return array
   */
   static function fromObjectToAssocArray(object|array $object) : array {
-    $result = [];
-
-    foreach($object as $key => $value) {
-      if((is_array($value) && self::isAssocArray($value)) || is_object($value)) {
-        $result[$key] = self::fromObjectToAssocArray($value);
-      } else {
-        $result[$key] = $value;
-      }
-    }
-
-    return $result;
+    return json_decode(json_encode($object), true);
   }
   
   /**
