@@ -264,10 +264,9 @@ class JSArray {
 
   /**
    * @param callable $callback (mixed $initial, mixed $item, int $index, array $array): mixed
-   * @return JSArray
    * @link https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
   */
-  function reduce(callable $callback, mixed $initial = null) : JSArray {
+  function reduce(callable $callback, mixed $initial = null) {
     $newArray = $this->clone()->getResult();
 
     if(is_null($initial)) {
@@ -278,7 +277,7 @@ class JSArray {
       $initial = $callback($initial, $item, $index, $newArray);
     }
 
-    return new JSArray($newArray);
+    return is_array($initial) ? new JSArray($initial) : $initial;
   }
 
   /**
