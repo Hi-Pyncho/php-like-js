@@ -53,7 +53,7 @@ class JSString {
    * @return bool
    * @link https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/startsWith
   */
-  function startsWith(string $searchString, int $position = 0) : bool {
+  function startsWith(string $searchString, int $position = null) : bool {
     $result = false;
     $newString = $this->string;
 
