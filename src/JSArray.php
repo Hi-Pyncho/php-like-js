@@ -258,7 +258,7 @@ class JSArray {
    * @link https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
   */
   function unshift(...$values) : int {
-    array_unshift($this->array, $values);
+    array_unshift($this->array, ...$values);
     return $this->getLength();
   }
 
