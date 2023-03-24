@@ -181,7 +181,7 @@ class JSArray {
   function includes($value, $fromIndex = 0) : bool {
     $result = false;
 
-    for($i = $fromIndex; $i < $this->getLength() - 1; $i++) {
+    for($i = $fromIndex; $i < $this->getLength(); $i++) {
       if($this->array[$i] === $value) {
         $result = true;
         break;
