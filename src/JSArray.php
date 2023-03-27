@@ -312,7 +312,7 @@ class JSArray {
       }
     }
   
-    return $cloned;
+    return new JSArray($cloned);
   }
 
   /**
